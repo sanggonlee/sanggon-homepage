@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background: #CCFFCC;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+div, h1, h2, h3, h4, p, button, a {
+  font-family: "Arial Black", sans-serif;
+}
+
+a {
+  color: black;/*#4183c4;*/
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 5px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, ul {
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+li {
+  width: 120px;
+  float: left;
+}
+
+li a:hover {
+  background-color: #888;
+  text-decoration: none;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+input {
+
+}
+
+.main-header {
+  position: fixed;
+  width: 100%;
+}
+
+.active {
+  background-color: #555;
+  color: white;
+}
+
+.home-photo-section {
+  margin: 20px;
+  float: left;
+}
+
+.home-introduction-section {
+  margin: 20px;
+  float: left;
+}
+
+.col-1 { width: 33.33%; }
+.col-2 { width: 66.66%; }
+.col-3 { width: 100%; }
+
+.project-item {
+  width: 300px;
+  margin: 5px;
+  float: left;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3090c0;
+}
+
+.project-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.project-image-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-grid-header {
+  height: 80px;
+}
+
+.add-button {
+  float: right;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 60px;
+  margin: 10px;
+  color: #fff;
+  background-color: #3090c0;
+  border: none;
+  border-radius: 8px;
+}
+
+.add-button:hover {
+  opacity: 0.6;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.text-enter-form {
+  display: block;
+  border-radius: 4px;
+  border: none;
+  background-color: #ccc;
+  text-decoration: none;
+  width: 100%;
+  height: 30px;
+  font-family: "Arial Black", sans-serif;
+  font-size: 20px;
+}
+
+.text-enter-form-long {
+  display: block;
+  border-radius: 4px;
+  border: none;
+  background-color: #ccc;
+  text-decoration: none;
+  width: 100%;
+  height: 150px;
+  font-family: "Arial Black", sans-serif;
+  font-size: 20px;
+}
+
+.portfolio-main-container {
+  float: left;
+  width: 75%;
+  height: 100%;
+}
+
+.filter-bar-keyword-item-on {
+  display: block;
+  padding: 10px;
+  background-color: "#3090c0";
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.filter-bar-keyword-item-off {
+  display: block;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.accounts-ui-wrapper {
+  float: right;
+  margin-right: 10px;
+}
+
+#filterBar {
+  width: 20%;
+  float: left;
+  background-color: #3090c0;
+  margin: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 8px;
+}
+
+#filterBarLabel {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f5fffa;
+  margin-bottom: 10px;
+}
+
+#portfolioGridTitle {
+  font-size: 40px;
+  float: left;
+  margin-left: 20px;
+  color: #000;
+}
+
+#filterBarKeywordList {
+  border: 1px solid white;
+}
+
+#submitButton {
+  width: 100px;
+  height: 40px;
+  background-color: #3090c0;
+  border-radius: 5px;
+  border: none;
+}
+
+#linkedinBadge {
+  margin: 20px;
+}
+
+#githubBadge {
+  margin: 20px;
+}
