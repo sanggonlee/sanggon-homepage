@@ -2,7 +2,7 @@
   "name": "sanggon-homepage-meteor",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "install": "mv node_modules public/node_modules"
   },
   "dependencies": {
     "classnames": "^2.2.3",
