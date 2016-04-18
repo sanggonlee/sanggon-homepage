@@ -21,9 +21,9 @@ Meteor.methods({
     check(description, String);
     check(keywords, Array);
     
-    if (!this.userId || this.userId !== process.env.ROOT_ID) {
+    //if (!this.userId || this.userId !== process.env.ROOT_ID) {
       throw new Meteor.Error('not-authorized');
-    }
+    //}
     
     let doc = {
       title,
