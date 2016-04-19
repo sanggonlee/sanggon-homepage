@@ -15,7 +15,7 @@ div, h1, h2, h3, h4, p, button, a {
 }
 
 a {
-  color: black;/*#4183c4;*/
+  color: #3090c0;/*black;/*#4183c4;*/
   text-decoration: none;
 }
 
@@ -130,6 +130,10 @@ input {
   border: none;
   border-radius: 8px;
   background-color: #3090c0;
+}
+
+.project-item:hover {
+  opacity: 0.6;
 }
 
 .project-title {
@@ -295,6 +299,10 @@ input {
   background-color: #3090c0;
   border-radius: 5px;
   border: none;
+}
+
+#submitButton:hover {
+  opacity: 0.6;
 }
 
 #linkedinBadge {

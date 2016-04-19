@@ -21,7 +21,7 @@ Meteor.methods({
     check(description, String);
     check(keywords, Array);
     
-    if (!this.userId || this.userId !== process.env.ROOT_ID) {
+    if (!Meteor.userId() || Meteor.user().username !== process.env.ROOT_USER_NAME) {
       throw new Meteor.Error('not-authorized');
     }
     

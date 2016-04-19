@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, IndexRedirect, hashHistory } from 'react-router';
 import '../imports/startup/accounts-config.js';
 import App from '../imports/ui/App';
 import Home from '../imports/ui/Home';
@@ -12,6 +12,7 @@ Meteor.startup(() => {
     ReactDOM.render((
       <Router history={hashHistory}>
         <Route path="/" component={App}>
+        	<IndexRedirect to="/home" />
           <Route path="/home" component={Home} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contact" component={Contact} />

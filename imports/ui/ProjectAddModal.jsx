@@ -21,7 +21,6 @@ export default class ProjectAddModal extends React.Component {
   
   closeModal() {
     document.getElementById('itemAddModal').style.display = 'none';
-    //this.state.keywords = [""];
   }
   
   handleKeywordChange(event) {

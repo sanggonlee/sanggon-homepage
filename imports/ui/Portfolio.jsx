@@ -6,6 +6,7 @@ import { union } from '../utils.js';
 import FilterBar from './FilterBar';
 import ProjectItem from './ProjectItem';
 import ProjectAddModal from './ProjectAddModal';
+import ProjectViewModal from './ProjectViewModal';
 import AccountsUIWrapper from './AccountsUIWrapper';
 
 import { Projects } from '../api/projects.js';
@@ -21,7 +22,7 @@ class Portfolio extends Component {
   }
     
   openAddItemModal() {
-      document.getElementById('itemAddModal').style.display = 'block';
+    document.getElementById('itemAddModal').style.display = 'block';
   }
   
   addKeywordsToProjects(projects) {
@@ -58,7 +59,8 @@ class Portfolio extends Component {
             <ProjectItem 
                 title={item.title} 
                 imgUrl={item.imgUrl} 
-                keywords={item.keywords} />
+                keywords={item.keywords}
+                item={item} />
         );
     })  
   }
@@ -83,6 +85,7 @@ class Portfolio extends Component {
             <div id="itemAddModal" className="modal">
                 <ProjectAddModal />
             </div>
+
         </div>
     );
   }
