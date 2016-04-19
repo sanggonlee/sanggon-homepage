@@ -105,12 +105,11 @@ export default createContainer(() => {
         //console.log(JSON.stringify(obj));
         projectIds = union(projectIds, obj.projectIds);
     });
-    console.log(projectIds);
     
     return {
         projects: Projects.find(
             { _id: { $in: projectIds } }
-        ).fetch().map((proj) => {
+        ).fetch().reverse().map((proj) => {
             proj['keywords'] = Keywords.find({
                 // For some reason $eq operator is not working, so checking
                 // equality by gte && lte for now

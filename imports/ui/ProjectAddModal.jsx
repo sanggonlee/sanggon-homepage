@@ -15,15 +15,11 @@ export default class ProjectAddModal extends React.Component {
     };
   }
   
-  sAlertError() {
-    
-  }
-  
   closeModal() {
     document.getElementById('itemAddModal').style.display = 'none';
   }
   
-  handleKeywordChange(event) {
+  handleChange(event) {
     switch(event.target.id) {
       case 'titleEnterForm':
         this.state.title = event.target.value;
@@ -49,6 +45,7 @@ export default class ProjectAddModal extends React.Component {
   handleSubmit() {
     console.log("Inserting a project with data: \n"+JSON.stringify(this.state));
     let keywords = this.state.keywords.split(', ');
+    let defaultToggle = 
     Meteor.call('projects.insert', 
       this.state.title, this.state.imgUrl, this.state.url, this.state.githubUrl,
       this.state.description, keywords, (err, result) => {
@@ -80,28 +77,28 @@ export default class ProjectAddModal extends React.Component {
         <h3>Add a new project</h3>
         <section className="form-section">
           <div className="text-enter-label">Project Title</div>
-          <input type="text" id="titleEnterForm" className="text-enter-form" onChange={this.handleKeywordChange.bind(this)} />
+          <input type="text" id="titleEnterForm" className="text-enter-form" onChange={this.handleChange.bind(this)} />
         </section>
         <section>
           <div className="text-enter-label">Image URL</div>
-          <input type="text" id="imgEnterForm" className="text-enter-form" onChange={this.handleKeywordChange.bind(this)} />
+          <input type="text" id="imgEnterForm" className="text-enter-form" onChange={this.handleChange.bind(this)} />
         </section>
         <section>
           <div className="text-enter-label">Project URL</div>
-          <input type="text" id="urlEnterForm" className="text-enter-form" onChange={this.handleKeywordChange.bind(this)} />
+          <input type="text" id="urlEnterForm" className="text-enter-form" onChange={this.handleChange.bind(this)} />
         </section>
         <section>
           <div className="text-enter-label">Github URL</div>
-          <input type="text" id="githubEnterForm" className="text-enter-form" onChange={this.handleKeywordChange.bind(this)} />
+          <input type="text" id="githubEnterForm" className="text-enter-form" onChange={this.handleChange.bind(this)} />
         </section>
         <section>
           <div className="text-enter-label">Description</div>
-          <textarea id="descrEnterForm" className="text-enter-form-long" onChange={this.handleKeywordChange.bind(this)} />
+          <textarea id="descrEnterForm" className="text-enter-form-long" onChange={this.handleChange.bind(this)} />
         </section>
         <section>
           <div className="text-enter-label">Keywords</div>
           <div id="keywordsEnterList">
-            <input type="text" id="keywordEnterForm" className="text-enter-form" onChange={this.handleKeywordChange.bind(this)} />
+            <input type="text" id="keywordEnterForm" className="text-enter-form" onChange={this.handleChange.bind(this)} />
           </div>
         </section>
         <button id="submitButton" onClick={this.handleSubmit.bind(this)}>Submit</button>

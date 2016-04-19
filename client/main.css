@@ -270,6 +270,10 @@ input {
   margin-right: 10px;
 }
 
+#defaultToggleCheckbox {
+  margin-left: 10px;
+}
+
 #filterBar {
   width: 20%;
   float: left;
