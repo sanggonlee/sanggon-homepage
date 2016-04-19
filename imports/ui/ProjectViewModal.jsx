@@ -18,6 +18,7 @@ export default class ProjectViewModal extends React.Component {
             }
           })()
         }
+        <br />
         { (() => {
             if (this.props.item.githubUrl) {
               return(<a href={this.props.item.githubUrl} target='blank'>Github URL</a>);
