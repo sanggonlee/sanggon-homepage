@@ -4,7 +4,7 @@ import ProjectViewModal from './ProjectViewModal';
 export default React.createClass({
 
   openViewItemModal() {
-    document.getElementById('itemViewModal').style.display = 'block';
+    document.getElementById('itemViewModal-'+this.props.item.title).style.display = 'block';
   },
 
   render() {
@@ -19,7 +19,7 @@ export default React.createClass({
             {this.props.item.keywords.join(', ')}
           </div>
         </div>
-        <div id="itemViewModal" className="modal">
+        <div id={"itemViewModal-"+this.props.item.title} className="modal">
           <ProjectViewModal item={this.props.item}/>
         </div>
       </div>

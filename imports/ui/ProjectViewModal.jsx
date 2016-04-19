@@ -3,13 +3,13 @@ import React from 'react';
 export default class ProjectViewModal extends React.Component {
 
   closeModal() {
-    document.getElementById('itemViewModal').style.display = 'none';
+    document.getElementById('itemViewModal-'+this.props.item.title).style.display = 'none';
   }
 
   render() {
   	return(
   		<div className="modal-content">
-        <span className="close-button" onClick={this.closeModal}>x</span>
+        <span className="close-button" onClick={this.closeModal.bind(this)}>x</span>
         <h3>{this.props.item.title}</h3>
         <p>{this.props.item.description}</p>
         { (() => {

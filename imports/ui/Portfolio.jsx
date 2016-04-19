@@ -56,11 +56,7 @@ class Portfolio extends Component {
   renderItems() {
     return this.props.projects.map((item) => {
         return (
-            <ProjectItem 
-                title={item.title} 
-                imgUrl={item.imgUrl} 
-                keywords={item.keywords}
-                item={item} />
+            <ProjectItem item={item} />
         );
     })  
   }
