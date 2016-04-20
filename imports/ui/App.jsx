@@ -6,7 +6,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul role="nav">
+        <ul role="nav" className="main-header">
           <li><NavLink to="/home">Home</NavLink></li>
           <li><NavLink to="/portfolio">Portfolio</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
