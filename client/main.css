@@ -40,7 +40,6 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  border-bottom: 1px solid #ddd;
   font-size: 2.5em;
   font-weight: bold;
   margin: 0 0 15px;
@@ -64,7 +63,7 @@ p, ul {
 
 }
 
-ul {
+ul.main-header {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -72,7 +71,7 @@ ul {
   background-color: #333;
 }
 
-li a {
+ul.main-header li a {
   display: block;
   color: white;
   text-align: center;
@@ -80,12 +79,12 @@ li a {
   text-decoration: none;
 }
 
-li {
+ul.main-header li {
   width: 120px;
   float: left;
 }
 
-li a:hover {
+ul.main-header li a:hover {
   background-color: #888;
   text-decoration: none;
 }
@@ -269,6 +268,10 @@ input {
 .accounts-ui-wrapper {
   float: right;
   margin-right: 10px;
+}
+
+.contact {
+  margin: 15px;
 }
 
 #defaultToggleCheckbox {
