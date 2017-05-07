@@ -14,7 +14,7 @@ class FilterBar extends Component {
   renderItems() {
     return this.props.keywords.map((keywordObj, index) => {
       return (
-        <FilterKeywordItem index={index} keywordObj={keywordObj}
+        <FilterKeywordItem key={index} index={index} keywordObj={keywordObj}
           onKeywordToggled={this.onKeywordToggled.bind(this)} />
       );
     })
