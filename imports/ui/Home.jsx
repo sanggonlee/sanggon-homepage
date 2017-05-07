@@ -4,9 +4,6 @@ export default React.createClass({
   render() {
     return (
       <div className="home-main">
-        <div className="home-photo-section">
-          <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAadAAAAJDg3YzI3MWJhLTYwNWMtNGQ1Ni04NDBhLWI1Y2ExMWRhMzI5OQ.jpg"/>
-        </div>
         <div className="home-introduction-section">
           <h3>Sang-gon Lee</h3>
           <p>
