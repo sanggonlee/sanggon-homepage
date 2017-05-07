@@ -15,12 +15,6 @@ import { Keywords } from '../api/keywords.js';
 
 class Portfolio extends Component {
 
-  constructor(props) {
-    super(props);
-    
-    Session.keys = {}; // clear past history
-  }
-    
   openAddItemModal() {
     document.getElementById('itemAddModal').style.display = 'block';
   }
@@ -94,7 +88,7 @@ Portfolio.propTypes = {
 export default createContainer(() => {
     Meteor.subscribe('projects');
     Meteor.subscribe('keywords');
-    
+
     let keywords = Session.get('keywords');
     if (keywords == null) {
         keywords = Keywords.find({}).fetch();
@@ -105,7 +99,7 @@ export default createContainer(() => {
         //console.log(JSON.stringify(obj));
         projectIds = union(projectIds, obj.projectIds);
     });
-    
+
     return {
         projects: Projects.find(
             { _id: { $in: projectIds } }
